@@ -15,7 +15,8 @@ const config = {
 		target: '#svelte',
 		paths: {
 			base: dev ? '' : '/hwb'
-		}
+		},
+		appDir: "internal",
 	}
 };
 
