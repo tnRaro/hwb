@@ -1,9 +1,12 @@
 <script lang="ts">
+import Hwb from "../domains/ColorPicker/components/Hwb.svelte";
+
 	type HWB = [number, number, number];
 	type RGB = [number, number, number];
 	let H = 35;
 	let W = 0.5;
 	let B = 0;
+	let size = 53;
 
 	const hueToRGB = (hue: number): RGB => {
 		hue = hue % 360;
@@ -70,7 +73,7 @@
     <input id="blackness" type="range" min={0} max={1} step={0.01} bind:value={B} />
 	</section>
 	<section>
-		<pre>
+		<pre style="width: 250px;">
       background: hwb({H}deg {(W * 100) | 0}% {(B * 100) | 0}%);
     </pre>
 		<div
@@ -83,6 +86,13 @@
 			style="background: hwb({H}deg {(W * 100) | 0}% {(B * 100) | 0}%);"
 		>
 		</div>
+	</section>
+	<section>
+		<label for="colorpicker-size">
+      Size
+		</label>
+    <input id="colorpicker-size" type="range" min={53} max={200} bind:value={size} />
+		<Hwb H={H} W={W} B={B} size={size}/>
 	</section>
 </main>
 

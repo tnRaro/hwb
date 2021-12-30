@@ -9,15 +9,15 @@
 
 		
 
-		<link rel="modulepreload" href="/hwb/internal/start-f8d039fd.js">
-		<link rel="modulepreload" href="/hwb/internal/chunks/vendor-c8fe7531.js">
-		<link rel="modulepreload" href="/hwb/internal/layout.svelte-bc6829ab.js">
-		<link rel="modulepreload" href="/hwb/internal/pages/index.svelte-13146257.js">
+		<link rel="modulepreload" href="/hwb/internal/start-d62d96f9.js">
+		<link rel="modulepreload" href="/hwb/internal/chunks/vendor-9b1cb2bd.js">
+		<link rel="modulepreload" href="/hwb/internal/layout.svelte-4d217c60.js">
+		<link rel="modulepreload" href="/hwb/internal/pages/index.svelte-720f3e74.js">
 		<link rel="stylesheet" href="/hwb/internal/assets/start-61d1577b.css">
 		<link rel="stylesheet" href="/hwb/internal/assets/pages/index.svelte-267b55f9.css">
 
 		<script type="module">
-			import { start } from "/hwb/internal/start-f8d039fd.js";
+			import { start } from "/hwb/internal/start-d62d96f9.js";
 			start({
 				target: document.querySelector("#svelte"),
 				paths: {"base":"/hwb","assets":""},
@@ -30,8 +30,8 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/hwb/internal/layout.svelte-bc6829ab.js"),
-						import("/hwb/internal/pages/index.svelte-13146257.js")
+						import("/hwb/internal/layout.svelte-4d217c60.js"),
+						import("/hwb/internal/pages/index.svelte-720f3e74.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -56,10 +56,14 @@
 		<label for="blackness">Blackness
 		</label>
     <input id="blackness" type="range" min="0" max="1" step="0.01" value="0"></section>
-	<section><pre>background: hwb(35deg 50% 0%);
+	<section><pre style="width: 250px;">background: hwb(35deg 50% 0%);
     </pre>
 		<div class="color-box svelte-1ndle3v" style="background: #ffca80;"></div>
 		<div class="color-box svelte-1ndle3v" style="background: hwb(35deg 50% 0%);"></div></section>
+	<section><label for="colorpicker-size">Size
+		</label>
+    <input id="colorpicker-size" type="range" min="53" max="200" value="53">
+		<canvas width="53" height="53"></canvas></section>
 </main>
 
 </div>
